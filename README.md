@@ -1,67 +1,64 @@
 # ☁️ AWS EC2 Web Server Deployment Project
 
-![AWS](https://img.shields.io/badge/AWS-EC2-orange)
-![Linux](https://img.shields.io/badge/Linux-Amazon_Linux-blue)
-![Apache](https://img.shields.io/badge/Web_Server-Apache-red)
-![PHP](https://img.shields.io/badge/PHP-8.5-purple)
-![Status](https://img.shields.io/badge/Project-Completed-success)
+> Deploying and managing a PHP web server on Amazon EC2 using User Data automation, Apache HTTP Server, MariaDB and AWS Systems Manager.
 
 ---
 
-## 📖 Overview
+## 📌 Project Overview
 
-This project demonstrates how to deploy a web server on Amazon EC2 using User Data automation.
+This project demonstrates how to deploy a web server in AWS using Amazon EC2 and automate the installation of software using User Data scripts.
 
-The server automatically installs:
+The project covers:
 
-- Apache HTTP Server
-- PHP
-- MariaDB
-
-The deployment was performed in AWS Skill Builder and tested using a live PHP application.
+- EC2 Instance Deployment
+- User Data Automation
+- Apache Installation
+- PHP Configuration
+- MariaDB Installation
+- Session Manager Access
+- EBS Volume Resizing
+- Instance Type Modification
+- Resource Cleanup
 
 ---
 
 ## 🛠 Technologies Used
 
-| Service | Purpose |
-|----------|----------|
-| Amazon EC2 | Virtual Server |
+| Technology | Purpose |
+|------------|----------|
+| Amazon EC2 | Virtual Machine |
 | Amazon EBS | Storage |
 | Amazon Linux 2023 | Operating System |
-| Apache | Web Server |
-| PHP | Application Runtime |
+| Apache HTTP Server | Web Server |
+| PHP 8.5 | Application Runtime |
 | MariaDB | Database |
-| AWS Systems Manager | Secure Instance Access |
+| Session Manager | Secure Remote Access |
 
 ---
 
-## 🏗 Architecture
+## 🏗 Solution Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
 
 A[User Browser]
---> B[Amazon EC2]
+--> B[Public DNS]
 
-B --> C[Apache]
+B --> C[Amazon EC2]
 
-C --> D[PHP]
+C --> D[Apache Web Server]
 
-D --> E[phpinfo.php]
+D --> E[PHP]
+
+E --> F[phpinfo.php]
 ```
 
 ---
 
-## 🎯 Objectives
+## ✅ Final Result
 
-- Launch Amazon EC2 instance
-- Configure networking
-- Deploy software using User Data
-- Access instance using Session Manager
-- Resize EBS storage
-- Change instance type
-- Validate application functionality
-- Terminate resources
+The PHP web application was successfully deployed and accessed through the EC2 public DNS.
+
+images/03-php-test/phpinfo-working.png
 
 ---
