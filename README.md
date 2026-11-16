@@ -1,5 +1,8 @@
 # ☁️ AWS EC2 Web Server Deployment Project
 
+> **Note:** This project was completed using AWS Skill Builder hands-on labs. The AWS environment, networking configuration, and lab resources were provided as part of the guided training environment. The objective of this project was to gain practical experience working with Amazon EC2, User Data automation, Linux administration, and AWS infrastructure concepts.
+
+
 > Deploying and managing a PHP web server on Amazon EC2 using User Data automation, Apache HTTP Server, MariaDB, and AWS Systems Manager Session Manager.
 
 ![AWS](https://img.shields.io/badge/AWS-EC2-orange)
